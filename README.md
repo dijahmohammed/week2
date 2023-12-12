@@ -19,6 +19,8 @@ for inspo
 <li>https://www.shecodes.io/athena/5273-create-straight-and-horizontal-lines-with-css </li>
 <li> https://www.w3schools.com/howto/howto_website_create_portfolio.asp</li>
 <li> https://www.w3schools.com/howto/howto_html_download_link.asp</li>
+</ul>
+
 ## License
 MIT License
 
