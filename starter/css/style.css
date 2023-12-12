@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #33393f;
+  color: lightblue;
+}
+
+header {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:; /* Add your background color here */
+  color: lightblue;
+  overflow: hidden;
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5px;
+  font-size: 16px;
+}
+
+#navigation {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  flex-direction: row;
+  float: right;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 48px;
+  background-color: lightblue;
+  color: #33393f;
+  background-size: cover;
+  border: 1px solid; /* Specify border style and color */
+  
+}
+
+h2{
+display: flex;
+font-size: 30px;
+padding: 20px;
+align-items: center;
+justify-content: center;
+}
+.download-button {
+  transform: scale(0.7);
+}
+
+#navigation ul {
+  list-style-type: none;
+  padding: 15px;
+  margin-left: 15px;
+  margin-right: 20px;
+  font-size: 20px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav li a {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 25px;
+  color: lightblue;
+  text-decoration: underline;
+}
+
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page-section {
+  text-align: center;
+  width: 300px;
+  margin: 50px auto;
+}
+
+#categoryGrid {
+  display:grid;
+  margin: 2px 5px 2px;
+  grid-template-rows: 1fr 0.5fr fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "project-1 project-1"
+    "project-2 project-3"
+    "project-4 project-5";
+  gap: 5px;
+  overflow: hidden;
+}
+
+.categoryGridArea {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:2px 5px 2px;
+  cursor: pointer;
+  display:inline-block;
+  align-content: end;
+}
+
+#project-1 {
+  grid-area: project-1;
+  grid-column: span 2;
+}
+#project-1 img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  border: 2px dashed white;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#project-1:hover img {
+  box-shadow: inset 0px 0px 8px lightblue, 0 0 15px lightblue;
+}
+
+#project-2 {
+  grid-area: project-2;
+}
+
+#project-2 img,
+#project-3 img,
+#project-4 img,
+#project-5 img {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  height: 100%; /* Adjust the height value to maintain aspect ratio */
+  object-fit: cover; /* Preserve image aspect ratio and fill the container */
+  border: 2px dashed white;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#project-2:hover img,
+#project-3:hover img,
+#project-4:hover img,
+#project-5:hover img {
+  box-shadow: inset 0px 0px 8px lightblue, 0 0 15px lightblue;
+}
+.card code-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover,
+.code-card:hover,
+.code-card:hover .card-header {
+  /* box-shadow: inset 0px 0px 8px lightblue, 0 0 15px lightblue; */
+}
+
+.card-header {
+  font-size: 18px;
+  padding: 15px;
+  margin: 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 100%) {
+  #categoryGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+/* about section image css */
+
+.container-about-pt2{
+  display: flex;
+  align-items:center;
+  justify-content: flex-start;
+
+}
+.imageAboutPage {
+  width: 50%;
+  height: 50%;
+  float: left;
+  padding: 20px;
+
+
+}
+
+.text{
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: ;
+  float: left;
+}
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 20px;
+  margin: 0px 5px;
+  font-size: 16px;
+  width: 100%; /* Make the footer fill the entire width */
+}
+
+#footer img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+}
+
+/* Adjustments for responsiveness */
+@media only screen and (max-width: 100%) {
+  #footer {
+    flex-direction: column; /* Stack the items in a column on small screens */
+  }
+
+  #footer img {
+    margin-bottom: 10px; /* Add some spacing between the images on small screens */
+  }
+}
+
